@@ -28,20 +28,17 @@ body {
   align-items: center;
 }
 
-
-
-\
-main {
+.wrapper {
   max-width: var(--body);
-  margin: auto;
-  box-sizing: border-box;
-	box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.5);
-  border: 1px solid white;
 }
 
-@media screen (min-width: 1000px) {
-  main {
-    width: 100vw!important;
+main {
+
+}
+
+@media screen (max-width: 1000px) {
+  .wrapper {
+    min-width: 100vw!important;
   }
 }
 

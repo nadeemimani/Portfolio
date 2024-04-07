@@ -4,11 +4,11 @@ import Icon from '../components/Icons';
 export default function Body({ posts, globalData }) {
   return (
     <div className="wrapper">
-      <main className="">
-          <h1 className="text-3xl lg:text-5xl text-center mb-12">
+      <main>
+          <h1 className="">
             {globalData.blogTitle}
           </h1>
-          <h2 className="text-3xl lg:text-5xl text-center mb-12">
+          <h2 className="">
             {globalData.blogCaption}
           </h2>
           <ul className="">
