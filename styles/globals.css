@@ -5,6 +5,34 @@
 
 :root {
   --body: 1000px;
+  --main: var(--secondary100);
+  --secondary: rgba(255,255,255, 1);
+  --secondary05: rgba(255,255,255, 0.05);
+  --secondary15: rgba(255,255,255, 0.15);
+  --secondary20: rgba(255,255,255, 0.20);
+  --secondary25: rgba(255,255,255, 0.25);
+  --secondary50: rgba(255,255,255, 0.50);
+  --secondary75: rgba(255,255,255, 0.75);
+  --secondary100: rgba(255,255,255, 1.00);
+  
+  --secondarydark05: rgba(0,0,0, 0.05);
+  --secondarydark15: rgba(0,0,0, 0.15);
+  --secondarydark20: rgba(0,0,0, 0.20);
+  --secondarydark25: rgba(0,0,0, 0.25);
+  --secondarydark50: rgba(0,0,0, 0.50);
+  --secondarydark75: rgba(0,0,0, 0.75);
+  --secondarydark100: rgba(0,0,0, 1.00);
+
+  /* --highlight100: #2f4f4f; */
+
+  --badgecolor: #79869B;
+
+  --transition50-50: 50ms ease-in 50ms;
+  --transition100-50: 100ms ease-in 50ms;
+  --transition200-50: 200ms ease-in-out 50ms;
+  --transition400: 400ms ease-in-out 0ms;
+  --bordercolor: solid 1px var(--secondary25);
+  --selection: var(--highlight100);
 }
 
 h1,
@@ -16,7 +44,6 @@ h6 {
   font-family: var(--font-primary);
 }
 
-
 body {
   font-family: var(--font-secondary);
   display: flex;
@@ -26,12 +53,24 @@ body {
 
 .wrapper {
   max-width: var(--body);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  overflow: visible;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: visible;
+  transition: var(--transition200-50);
+}
+
+nav:hover ~ main {
+  transform: scale(1.005);
+  filter: blur(20px);
+  transition: var(--transition200-50);
 }
 
 @media screen (max-width: 1000px) {
@@ -61,7 +100,6 @@ main {
   align-items: center;
   height: 150px;
   width: 150px;
-  border: 1px solid white;
 }
 
 .logoicon {
@@ -70,6 +108,7 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  transition: var(--transition200-50);
 }
 
 .category-button:hover .logoicon,
@@ -81,10 +120,47 @@ main {
 .category-button:hover .logoicon,
 .category-button:hover .logoicon {
   transform: scale(1.2);
-  transition: var(--transition50-50);
+  transition: var(--transition200-50);
+ 
 }
+
+
 
 .arrow {
   height: 35px;
   width: 35px;
+}
+
+/* Layer Effects */
+
+.mixblendfg {
+  mix-blend-mode: overlay;
+}
+
+.mixblendfg2 {
+  mix-blend-mode: lighten;
+
+}
+
+.box {
+  -webkit-mask-image: linear-gradient(to bottom,transparent 0%, black 25%, black 65%, transparent 90%);
+  mask-image: linear-gradient(to bottom,transparent 0%, black 25%, black 65%, transparent 90%);
+}
+.box-h {
+  -webkit-mask-image: linear-gradient(to right,transparent 10%, black 25%, black 75%, transparent 90%);
+  mask-image: linear-gradient(to right,transparent 10%, black 25%, black 75%, transparent 90%);
+}
+
+.box360 {
+  -webkit-mask-image: radial-gradient( white 0%, white 50%, transparent 60% );
+  mask-image: radial-gradient( white 0%, white 50%, transparent 60% );
+}
+
+.lineardown {
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, transparent 60%);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, transparent 60%);
+}
+.linearright {
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, transparent 90%);
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, transparent 90%);
 }

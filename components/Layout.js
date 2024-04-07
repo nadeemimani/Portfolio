@@ -7,6 +7,7 @@ export function GradientBackground({ variant, className }) {
     {
       [styles.colorBackground]: variant === 'large',
       [styles.colorBackgroundBottom]: variant === 'small',
+      [styles.backgroundfx]: variant === 'medium',
     },
     className
   );

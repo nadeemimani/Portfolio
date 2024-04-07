@@ -44,7 +44,7 @@ export default function Body({ posts, globalData }) {
           <h1 className="text-3xl lg:text-5xl text-center mb-12">
             {globalData.blogTitle}
           </h1>
-          <h2 className="text-3xl lg:text-5xl text-center mb-12">
+          <h2 className="text-3xl lg:text-2xl text-center mb-12">
             {globalData.blogCaption}
           </h2>
           <ul className="">

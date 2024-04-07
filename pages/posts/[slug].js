@@ -79,7 +79,7 @@ export default function PostPage({
                 <h4 className="text-2xl text-gray-700 mb-6 dark:text-white">
                   {nextPost.title}
                 </h4>
-                <ArrowIcon className="mt-auto mx-auto md:ml-0" />
+                <Icon className="mt-auto mx-auto md:ml-0" />
               </a>
             </Link>
           )}
