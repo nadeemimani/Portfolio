@@ -3,6 +3,11 @@
 @tailwind utilities;
 @tailwind variants;
 
+:root {
+  --body: 1000px;
+
+}
+
 h1,
 h2,
 h3,
@@ -12,90 +17,79 @@ h6 {
   font-family: var(--font-primary);
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: var(--font-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+\
+main {
+  max-width: var(--body);
+  margin: auto;
+  box-sizing: border-box;
+	box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
+}
+
+@media screen (min-width: 1000px) {
+  main {
+    width: 100vw!important;
+  }
 }
 
 /* Icons */
+.nav-list,
+.design-list {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.nav-list .logoicon {
+  height: 35px;
+  width: 35px;
+  margin-bottom: 10px;
+}
+
+.category-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  border: 1px solid white;
+}
 
 .logoicon {
-  height: 135px;
-  width: 135px;
+  height: 125px;
+  width: 125px;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
 }
 
-.nav-list .logoicon {
-  height: 125px;
-  width: 125px;
-  margin-bottom: 10px;
-}
-
-.design-nav-toggle:hover .logoicon,
-.marketing-nav-toggle:hover .logoicon,
-.development-nav-toggle:hover .logoicon,
-.consulting-nav-toggle:hover .logoicon, 
-.portfolio-nav-toggle:hover .logoicon,
-.resume-nav-toggle:hover .logoicon,
-.linkedin-nav-toggle:hover .logoicon,
-.contact-nav-toggle:hover .logoicon {
+.category-button:hover .logoicon,
+.category-button:hover .logoicon,
+.category-button:hover .logoicon,
+.category-button:hover .logoicon, 
+.category-button:hover .logoicon,
+.category-button:hover .logoicon,
+.category-button:hover .logoicon,
+.category-button:hover .logoicon {
   transform: scale(1.2);
   transition: var(--transition50-50);
 }
 
-
-.designlogo {
-  background-image: url(/images/gallery/icons/ui/linkedin-icon-512x512-dhkaf9ri.png);
-}
-
-.marketinglogo {
-  background-image: url(/images/gallery/icons/UI/marketing.svg);
-}
-
-.developmentlogo {
-  background-image: url(/images/gallery/icons/UI/develop.svg);
-}
-
-.consultinglogo {
-  background-image: url(/images/gallery/icons/UI/consult.svg);
-}
-
-.portfoliologo {
-  background-image: url(/images/gallery/icons/UI/portfolio.svg);
-}
-
-.resumelogo {
-  background-image: url(/images/gallery/icons/UI/resume.svg);
-}
-
-.linkedin {
-  background-image: url(/images/gallery/icons/socialmedia/Linkedin.svg);
-}
-
-.contactlogo {
-  background-image: url(/images/gallery/icons/UI/contact.svg);
-}
-
-.photoshop {
-  background-image: url(/images/gallery/icons/programs/Adobe/wrl/Photoshop.svg);
-}
-
-.lightroom {
-  background-image: url(/images/gallery/icons/programs/Adobe/wrl/lightroom.svg);
-}
-.indesign {
-  background-image: url(/images/gallery/icons/programs/Adobe/wrl/indesign.svg);
-}
-.illustrator {
-  background-image: url(/images/gallery/icons/programs/Adobe/wrl/illustrator.svg);
-}
-.aftereffects {
-  background-image: url(/images/gallery/icons/programs/Adobe/wrl/aftereffects.svg);
-}
-.premierepro {
-  background-image: url(/images/gallery/icons/programs/Adobe/wrl/premierepro.svg);
-}
-.acrobat {
-  background-image: url(/images/gallery/icons/programs/Adobe/wrl/acrobat.svg);
+.arrow {
+  height: 35px;
+  width: 35px;
 }

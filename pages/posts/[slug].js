@@ -9,7 +9,7 @@ import {
 import { MDXRemote } from 'next-mdx-remote';
 import Head from 'next/head';
 import Link from 'next/link';
-import ArrowIcon from '../../components/ArrowIcon';
+import Icon from '../../components/Icons';
 import CustomLink from '../../components/CustomLink';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
@@ -66,7 +66,7 @@ export default function PostPage({
                 <h4 className="text-2xl text-gray-700 mb-6 dark:text-white">
                   {prevPost.title}
                 </h4>
-                <ArrowIcon className="transform rotate-180 mx-auto md:mr-0 mt-auto" />
+                <Icon className="arrow mt-4" iconType="Arrow" />
               </a>
             </Link>
           )}
