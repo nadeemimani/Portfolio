@@ -39,9 +39,9 @@ export default function Body({ posts, globalData }) {
           ))}
         </ul>
         <nav className="primary-navigation" id="primary-navigation">
-          <ul aria-label="Primary" role="list" className="nav-list clear">
+          <ul aria-label="Primary" role="list" className="nav-list">
             <li className="design-nav-toggle list-flex clear" aria-controls="design-navigation">
-              <div className="logoicon designlogo"></div>
+              <img src="/images/gallery/icons/ui/linkedin-icon-512x512-dhkaf9ri.png" className="logoicon designlogo"></img>
               <p>Design</p>
             </li>
             <li className="marketing-nav-toggle list-flex clear" aria-controls="marketing-navigation" nohighlight="">
