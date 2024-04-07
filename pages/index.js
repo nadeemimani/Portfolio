@@ -1,20 +1,18 @@
-import Link from 'next/link';
 import { getPosts } from '../utils/mdx-utils';
 
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import Main from '../components/Main';
 import Layout, { GradientBackground } from '../components/Layout';
-import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
+import Body from '../components/Body'; //
 
 export default function Index({ posts, globalData }) {
   return (
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} keywords={globalData.blogKeywords}  />
       <Header name={globalData.name} />
-      <Main />
+      <Body posts={posts} globalData={globalData} />
       <Footer copyrightText={globalData.footerText} />
       <GradientBackground
         variant="large"
