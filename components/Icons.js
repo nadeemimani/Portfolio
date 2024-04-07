@@ -116,7 +116,7 @@ export default function Icon({ className, color = 'white', iconType }) {
       case 'Portfolio': return <Portfolio />;
       case 'Resume': return <Resume />;
       case 'Linkedin': return <Linkedin />;
-      case 'Contact': return <Linkedin />;
+      case 'Contact': return <Contact />;
 
       default:
         return null; // Or some default SVG
