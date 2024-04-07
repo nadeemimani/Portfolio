@@ -10,7 +10,7 @@ export const getGlobalData = () => {
     : 'portfolio, resume';
   const footerText = process.env.BLOG_FOOTER_TEXT
     ? decodeURI(process.env.BLOG_FOOTER_TEXT)
-    : 'All rights reserved.';
+    : '2022 All Rights Reserved. Designed by Nadeem Imani';
 
   return {
     name,

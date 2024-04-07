@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
-@import url(/css/style.css);
-@import url(/css/animate);
+@import url(/styles/style.css);
+@import url(/styles/animate);
 
 h1,
 h2,
