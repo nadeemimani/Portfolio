@@ -15,8 +15,8 @@
   "scripts": {
     "dev": "next",
     "dev:watch": "next-remote-watch ./posts",
-    "build": "next build && start http://localhost:3000 && npm run dev",
-    "start": "next build && next start && start http://localhost:3000 && npm run dev",
+    "build": "next build",
+    "start": "next build && start http://localhost:3000 && npm run dev",
     "export": "next build && next export",
     "lint": "next lint"
   },
