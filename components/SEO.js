@@ -17,10 +17,6 @@ export default function SEO({ title, description }) {
       <meta name="twitter:image" content="" />
       <meta name="twitter:url" content="" />
       <meta name="twitter:card" content="" />
-      <link rel="stylesheet" href="/css/animate.css" />
-      <link rel="stylesheet" href="/css/icomoon.css" />
-      <link rel="stylesheet" href="/css/bootstrap.css" />
-      <link rel="stylesheet" href="/css/style.css" />
     </Head>
   );
 }

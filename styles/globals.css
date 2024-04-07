@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
-@import /css/animate;
-@import /css/icomoon;
-@import /css/bootstrap;
-@import /css/style.css;
+@import url(/css/style.css);
+@import url(/css/bootstrap);
+@import url(/css/icomoon);
+@import url(/css/animate);
 
 h1,
 h2,
