@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-export default function SEO({ title, description }) {
+export default function SEO({ title, description, keywords }) {
   return (
     <Head>
       <title>{title}</title>
@@ -11,7 +11,7 @@ export default function SEO({ title, description }) {
       <meta property="og:description" content=""/>
       <meta name="description" content={description} />
 	    <meta name="author" content="nadeemimani.ca" />
-      <meta name="keywords" content="A Portfolio of Work by Nadeem Imani" />
+      <meta name="keywords" content={keywords} />
       <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       <meta name="twitter:title" content="" />
       <meta name="twitter:image" content="" />

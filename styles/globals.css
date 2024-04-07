@@ -3,8 +3,6 @@
 @tailwind utilities;
 @tailwind variants;
 @import url(/css/style.css);
-@import url(/css/bootstrap);
-@import url(/css/icomoon);
 @import url(/css/animate);
 
 h1,
