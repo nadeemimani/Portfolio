@@ -16,7 +16,7 @@
     "dev": "next",
     "dev:watch": "next-remote-watch ./posts",
     "build": "next build",
-    "start": "next start",
+    "start": "next start && start http://localhost:3000",
     "export": "next build && next export",
     "lint": "next lint"
   },
