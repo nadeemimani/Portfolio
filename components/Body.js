@@ -4,11 +4,47 @@ import Icon from '../components/Icons';
 export default function Body({ posts, globalData }) {
   return (
     <div className="wrapper">
-      <main>
-          <h1 className="">
+      <nav className="primary-navigation" id="primary-navigation">
+          <ul aria-label="Primary" role="list" className="nav-list clear">
+            <li className="category-button list-flex clear" aria-controls="design-navigation">
+              <Icon className="logoicon" iconType="Design"/>
+              <p>Design</p>
+            </li>
+            <li className="category-button list-flex clear" aria-controls="marketing-navigation" nohighlight="">
+              <Icon className="logoicon" iconType="Marketing"/>
+              <p>Market</p>
+            </li>
+            <li className="category-button list-flex clear" aria-controls="development-navigation" nohighlight="">
+              <Icon className="logoicon" iconType="Development"/>
+              <p>Develop</p>
+            </li>
+            <li className="category-button list-flex clear" aria-controls="consulting-navigation" nohighlight="">
+              <Icon className="logoicon" iconType="Consulting"/>
+              <p>Consult</p>
+            </li>
+            <li className="category-button list-flex clear" aria-controls="portfolio-navigation" nohighlight="">
+              <Icon className="logoicon" iconType="Portfolio"/>
+              <p>Portfolio</p>
+            </li>
+            <li className="category-button list-flex clear" aria-controls="resume-navigation" nohighlight="">
+              <Icon className="logoicon" iconType="Resume"/>
+              <p>Resume</p>
+            </li>											
+            <li className="category-button list-flex clear" aria-controls="resume-navigation" nohighlight="">
+                <Icon className="logoicon" iconType="Linkedin"/>
+                <p>LinkedIn</p>
+            </li>
+            <li className="category-button list-flex">					
+              <Icon className="logoicon" iconType="Contact"/>
+              <p>Contact</p>
+            </li>
+          </ul>
+      </nav>
+      <main className="">
+          <h1 className="text-3xl lg:text-5xl text-center mb-12">
             {globalData.blogTitle}
           </h1>
-          <h2 className="">
+          <h2 className="text-3xl lg:text-5xl text-center mb-12">
             {globalData.blogCaption}
           </h2>
           <ul className="">
@@ -39,42 +75,7 @@ export default function Body({ posts, globalData }) {
               </li>
             ))}
           </ul>
-          <nav className="primary-navigation" id="primary-navigation">
-            <ul aria-label="Primary" role="list" className="nav-list clear">
-              <li className="category-button list-flex clear" aria-controls="design-navigation">
-                <Icon className="logoicon" iconType="Design"/>
-                <p>Design</p>
-              </li>
-              <li className="category-button list-flex clear" aria-controls="marketing-navigation" nohighlight="">
-                <Icon className="logoicon" iconType="Marketing"/>
-                <p>Market</p>
-              </li>
-              <li className="category-button list-flex clear" aria-controls="development-navigation" nohighlight="">
-                <Icon className="logoicon" iconType="Development"/>
-                <p>Develop</p>
-              </li>
-              <li className="category-button list-flex clear" aria-controls="consulting-navigation" nohighlight="">
-                <Icon className="logoicon" iconType="Consulting"/>
-                <p>Consult</p>
-              </li>
-              <li className="category-button list-flex clear" aria-controls="portfolio-navigation" nohighlight="">
-                <Icon className="logoicon" iconType="Portfolio"/>
-                <p>Portfolio</p>
-              </li>
-              <li className="category-button list-flex clear" aria-controls="resume-navigation" nohighlight="">
-                <Icon className="logoicon" iconType="Resume"/>
-                <p>Resume</p>
-              </li>											
-              <li className="category-button list-flex clear" aria-controls="resume-navigation" nohighlight="">
-                  <Icon className="logoicon" iconType="Linkedin"/>
-                  <p>LinkedIn</p>
-              </li>
-              <li className="category-button list-flex">					
-                <Icon className="logoicon" iconType="Contact"/>
-                <p>Contact</p>
-              </li>
-            </ul>
-          </nav>
+
       </main>
     </div>
   );
