@@ -92,7 +92,7 @@ nav:hover ~ main {
   margin-bottom: 10px;
 }
 
-.category-button {
+.category-button a{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -109,6 +109,7 @@ nav:hover ~ main {
   position: relative;
   transition: var(--transition200-50);
 }
+
 
 .category-button:hover .logoicon,
 .category-button:hover .logoicon,

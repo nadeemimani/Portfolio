@@ -47,7 +47,7 @@ export default function Body({ posts, globalData }) {
           <h2 className="text-3xl lg:text-2xl text-center mb-12">
             {globalData.blogCaption}
           </h2>
-          <ul className="">
+          <ul className="nav-list clear">
             {posts.map((post) => (
               <li
                 key={post.filePathn}

@@ -44,6 +44,7 @@ export default function PostPage({
       <Header name={globalData.name} />
       <article className="px-6 md:px-0">
         <header>
+          <Icon className="arrow mt-4" iconType={frontMatter.logo} />
           <h1 className="text-3xl md:text-5xl dark:text-white text-center mb-12">
             {frontMatter.title}
           </h1>
@@ -53,6 +54,7 @@ export default function PostPage({
         </header>
         <main>
           <article className="prose dark:prose-dark">
+          
             <MDXRemote {...source} components={components} />
           </article>
         </main>
