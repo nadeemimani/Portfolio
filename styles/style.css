@@ -1025,7 +1025,7 @@ html body ul li {
 }
 
 #navoverlay:hover ~ #bgoverlay {
-  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   transition: var(--transition50-50);
 }
 
@@ -1134,7 +1134,7 @@ html body ul li {
 .containerbg {
   background-color: var(--secondary20);
   border-radius: 5px;
-  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   height: 55vh;
   padding: 30px;
   

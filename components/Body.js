@@ -24,11 +24,11 @@ export default function Body({ posts, globalData }) {
                   >
                   
                     <a className="">
-                      <div class="card-image">
+                      <div className="card-image">
                         <Icon className="img" iconType={post.data.logo}/>
                         <Icon className="img2" iconType={post.data.logo}/>
                       </div>
-                      <div class="card-text">
+                      <div className="card-text">
                         <p>{post.data.title}</p>
                       </div>
                         
