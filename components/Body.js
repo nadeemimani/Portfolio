@@ -12,22 +12,28 @@ export default function Body({ posts, globalData }) {
             {globalData.blogCaption}
           </h2>
           <nav className="primary-navigation" id="primary-navigation">
-            <ul className="nav-list clear">
+            <ul className="cardrow gallery nav-list clear">
               {posts.map((post) => (
                 <li
                   key={post.filePathn}
-                  className="category-button list-flex clear"
+                  className="clear card card-border"
                 >
                   <Link
                     as={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}
                     href={`/posts/[slug]`}
                   >
+                  
                     <a className="">
-                      
-                      <Icon className="logoicon" iconType={post.data.logo}/>
-                      <p className="">{post.data.title}</p>
-
+                      <div class="card-image">
+                        <Icon className="img" iconType={post.data.logo}/>
+                        <Icon className="img2" iconType={post.data.logo}/>
+                      </div>
+                      <div class="card-text">
+                        <p>{post.data.title}</p>
+                      </div>
+                        
                     </a>
+
                   </Link>
                 </li>
               ))}

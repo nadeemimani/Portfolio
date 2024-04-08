@@ -1,7 +1,7 @@
-export default function Icon({ className, color = 'white', iconType }) {
+export default function Icon({ className, iconType }) {
   const Arrow = () => (
     <path
-    className={`stroke-current ${color}`} 
+    className={`${className} fill-current dark:fill-white`}
     strokeWidth="1"
     d="M5 12h14M12
     19l7-7-7-7" />
@@ -126,9 +126,8 @@ export default function Icon({ className, color = 'white', iconType }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="white"
       viewBox="0 0 24 24"
-      className={className}
+      className={`${className} fill-current dark:fill-white`}
     >
       {renderSvg()}
     </svg>

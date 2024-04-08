@@ -78,52 +78,139 @@ nav:hover ~ main {
   }
 }
 
-/* Icons */
-.nav-list,
-.design-list {
-  display: flex;
-  justify-content: space-between;
+/* Cards */
 
-}
-
-.nav-list .logoicon {
-  height: 35px;
-  width: 35px;
-  margin-bottom: 10px;
-}
-
-.category-button a{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  width: 150px;
-}
-
-.logoicon {
+.postheader .logoicon {
   height: 125px;
   width: 125px;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
+}
+
+.cardrow {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  list-style: none;
+  padding-inline-start: 0;
+  grid-auto-flow: column;
+  gap: 7px;
+}
+
+.cardrow .img {
+  opacity:.2;
+  transition: var(--transition200-50);
+}
+
+.cardrow .img2 {
+  opacity: 0;
+  transition: var(--transition200-50);
+}
+
+.cardrow .card-image {
+  padding: 15px;
+}
+
+.cardrow .card-text {
+  align-items: flex-start;
+}
+
+.cardrow .card:hover{
+  cursor: pointer;
+}
+
+
+.cardrow .card:hover .img {
+  opacity: 0;
   transition: var(--transition200-50);
 }
 
 
-.category-button:hover .logoicon,
-.category-button:hover .logoicon,
-.category-button:hover .logoicon,
-.category-button:hover .logoicon, 
-.category-button:hover .logoicon,
-.category-button:hover .logoicon,
-.category-button:hover .logoicon,
-.category-button:hover .logoicon {
-  transform: scale(1.2);
+.cardrow .card:hover .img2 {
+  opacity: 1;
   transition: var(--transition200-50);
- 
 }
 
+.card-border {
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-left: 2px solid rgba(0, 0, 0, 0.1);
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  transition: var(--transition200-50);
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+  background-color: var(--secondary15);
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.1);
+  transition: var(--transition200-50);
+}
+
+.card:hover {
+  box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+  transition: var(--transition200-50);
+}
+
+.card-image {
+  height: 100px;
+  width: inherit;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  justify-content:center;
+  object-fit: contain;
+  background-color: var(--highlight100);
+}
+
+.card-text {
+  height: 50px;
+  flex-grow: 1;
+  display: flex;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: uppercase;
+  align-items: center;
+  text-align: center;
+  justify-content:center;
+  line-height: 1;
+}
+
+.img, .img2 {
+  position: absolute;
+  height: 45px;
+  width: 45px;
+}
+
+.img2{
+  transform: scale(.6);
+  opacity: 0;
+  transition: var(--transition200-50);
+}
+
+.card:hover .img{
+  filter: blur(100px);
+  opacity: 0;
+  transition: var(--transition200-50);
+}
+
+.card:hover .img2{
+  transform: scale(1);
+  opacity: 1;
+  transition: var(--transition200-50);
+}
+
+
+.logoicon {
+  height: 45px;
+  width: 45px;
+}
 
 
 .arrow {
@@ -163,4 +250,27 @@ nav:hover ~ main {
 .linearright {
   -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, transparent 90%);
   mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, transparent 90%);
+}
+
+.postheader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.c-1 {
+  align-items:flex-end;
+}
+
+.rtl > .c-2 {
+  align-items:flex-end;
+}
+
+.transform {
+  transform: rotate(90deg);
+  transform-origin: center;
 }

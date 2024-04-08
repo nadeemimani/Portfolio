@@ -100,6 +100,7 @@ module.exports = {
       borderRadius: ['first', 'last'],
       borderWidth: ['last', 'hovered-sibling'],
       typography: ['dark'],
+      fill: ['dark'],
     },
   },
   plugins: [hoveredSiblingPlugin, pluginTypography, themesConfig],
