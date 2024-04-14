@@ -1,10 +1,10 @@
 export const getGlobalData = () => {
   const name = process.env.BLOG_NAME
     ? decodeURI(process.env.BLOG_NAME)
-    : 'Media Builders';
+    : 'Design | Development | Marketing';
   const blogTitle = process.env.BLOG_TITLE
     ? decodeURI(process.env.BLOG_TITLE)
-    : 'Media Builders';
+    : 'Nadeem Imani';
   const blogCaption = process.env.BLOG_CAPTION
     ? decodeURI(process.env.BLOG_CAPTION)
     : 'Over 15 years of professional experience.';
