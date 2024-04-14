@@ -51,8 +51,8 @@ export default function Layout({ children }) {
   }, []);
 
   return (
-    <div className="relative pb-24">
-      <div className="flex flex-col items-center w-full mx-auto">
+    <div className="relative">
+      <div className="wrapper flex flex-col items-center mx-auto">
         {children}
       </div>
     </div>

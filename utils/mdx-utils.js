@@ -62,17 +62,19 @@ export const getNextPostBySlug = (slug) => {
   const currentPost = posts.find((post) => post.filePath === currentFileName);
   const currentPostIndex = posts.indexOf(currentPost);
 
-  const post = posts[currentPostIndex - 1];
-  // no prev post found
-  if (!post) return null;
+  const nextPost = posts[currentPostIndex + 1];
+  // no next post found
+  if (!nextPost) return null;
 
-  const nextPostSlug = post?.filePath.replace(/\.mdx?$/, '');
+  const nextPostSlug = nextPost.filePath.replace(/\.mdx?$/, '');
 
   return {
-    title: post.data.title,
+    title: nextPost.data.title,
     slug: nextPostSlug,
+    logo: nextPost.data.logo,
   };
 };
+
 
 export const getPreviousPostBySlug = (slug) => {
   const posts = getPosts();
@@ -80,14 +82,16 @@ export const getPreviousPostBySlug = (slug) => {
   const currentPost = posts.find((post) => post.filePath === currentFileName);
   const currentPostIndex = posts.indexOf(currentPost);
 
-  const post = posts[currentPostIndex + 1];
-  // no prev post found
-  if (!post) return null;
+  const previousPost = posts[currentPostIndex - 1];
+  // no previous post found
+  if (!previousPost) return null;
 
-  const previousPostSlug = post?.filePath.replace(/\.mdx?$/, '');
+  const previousPostSlug = previousPost.filePath.replace(/\.mdx?$/, '');
 
   return {
-    title: post.data.title,
+    title: previousPost.data.title,
     slug: previousPostSlug,
+    logo: previousPost.data.logo,
   };
 };
+
