@@ -11,7 +11,7 @@ export default function Index({ posts, globalData }) {
   return (
     <Layout>
       <SEO title={globalData.name} description={globalData.blogTitle} keywords={globalData.blogKeywords}  />
-      <Header/>
+      <Header name={globalData.name} />
       <Body posts={posts} globalData={globalData} />
       <Footer copyrightText={globalData.footerText} />
       <GradientBackground

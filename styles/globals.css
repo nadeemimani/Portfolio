@@ -305,7 +305,3 @@ nav:hover ~ main {
 .prev .post-title-flex, .prev .post-flex-line {
   flex-flow: row-reverse;
 }
-
-.prev .switcher {
-  display: none;
-}

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Icon from '../components/Icons';
 
-export default function Body({ name, posts, globalData }) {
+export default function Body({ posts, globalData }) {
   return (
     <div className="wrapper">
       <main className="">
